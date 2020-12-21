@@ -6,7 +6,7 @@ Backend is written in Java, using Spring framework with Spring security and MYSQ
 
 How to run project:
 
-1. Make sure you have MySQL installed on computer. The sample data will be loaded automatically.
+1. RUN ONLY WITH STORE APPLICATION FRONTEND. Make sure you have MySQL installed on computer. The sample data will be loaded automatically.
 2. Run backend part first
 3. Run frontend:
 >> npm start
