@@ -9,8 +9,6 @@ How to run project:
 1. Make sure you have MySQL installed on computer. The sample data will be loaded automatically.
 2. Run backend part first
 3. Run frontend:
->> npm install
-<br/>
 >> npm start
 4. Your browser will start automatically and open application (on localhost:3000)
 5. To login use credentials:
