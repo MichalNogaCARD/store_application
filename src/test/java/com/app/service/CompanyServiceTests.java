@@ -254,11 +254,4 @@ public class CompanyServiceTests {
 
         Assertions.assertEquals(companyDTO, actualCompany);
     }
-
-    @Test
-    @DisplayName("edit")
-    void test60() {
-
-        // TODO: 2020-02-16
-    }
 }

@@ -40,8 +40,6 @@ public class CartService {
     private final CompanyRepository companyRepository;
 
     private final XmlParserOptima xmlParserOptima;
-    //private final EmailService emailService; todo zrobić logownaie
-    //private final LoggerService loggerService;
 
     public CartDTO getCart(Long cartId) {
         if (cartId == null) {
@@ -315,16 +313,6 @@ public class CartService {
                 CompanyMapper.toDto(company));
         String pathToFile = FileManager.saveFileToDisk(orderInXml, fileName);
 
-        // TODO: 05.10.2020
-        //emailService.sendEmail(CustomAddresses.DEFAULT_DESTINATION_MAILBOX, "ZAMÓWIENIE", fileName, pathToFile);
-        //Thread t1 = new EmailService(loggerService);
-        //t1.start();
-
-        EmailService emailService = new EmailService(CustomAddresses.DEFAULT_DESTINATION_MAILBOX, "ZAMÓWIENIE", fileName, pathToFile);
-        new Thread(emailService).start();
-
-        //emailService.sendEmail(CustomAddresses.DEFAULT_DESTINATION_MAILBOX, "ZAMÓWIENIE", fileName, pathToFile);
-
         return CartMapper.toDto(cart);
     }
 
@@ -360,10 +348,6 @@ public class CartService {
         String orderInXml = xmlParserOptima.generateXmlFileContent(CartMapper.toDto(cart),
                 cart.getProductsInCart().stream().map(ProductInCartMapper::toDto).collect(Collectors.toSet()),
                 CompanyMapper.toDto(company));
-
-        String pathToFile = FileManager.saveFileToDisk(orderInXml, fileName);
-        // TODO: 07.10.2020  
-        //emailService.sendEmail(CustomAddresses.DEFAULT_DESTINATION_MAILBOX, "ZAMÓWIENIE", fileName, pathToFile);
 
         return CartMapper.toDto(cart);
     }

@@ -20,8 +20,6 @@ import java.util.concurrent.TimeUnit;
 @RequiredArgsConstructor
 public class EmailService implements Runnable {
 
-    //private final LoggerService loggerService;
-
     private final String to;
     private final String subject;
     private final String fileName;
@@ -60,15 +58,6 @@ public class EmailService implements Runnable {
             }
 
             javaMailSender().send(message);
-
-            // // TODO: 07.10.2020 \https://www.baeldung.com/registration-verify-user-by-email
-
-            TimeUnit.SECONDS.sleep(10); //// TODO: 07.10.2020 remove
-
-//            loggerService.add(LoggerInfo.builder()
-//                    .infoCode(InfoCodes.SERVICE_EMAIL)
-//                    .message("email sent " + message.getFileName())
-//                    .build());
 
         } catch (Exception e) {
             e.printStackTrace();

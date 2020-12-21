@@ -74,29 +74,6 @@ public class UserServiceTests {
     @Test
     @DisplayName("addUser")
     void test20() {
-
- /*       UserDTO userDTO = UserDTO.builder().id(1L).build();
-
-        Company company = Company.builder().id(2L).build();
-        Optional<Company> companyOptional = Optional.of(company);
-
-        UserDTO expectedUser = UserDTO.builder()
-                .id(1L)
-                .enabled(true)
-                .role(Role.USER)
-                .build();
-
-        Mockito
-                .when(companyRepository.findById(company.getId()))
-                .thenReturn(companyOptional);
-
-        UserDTO actualUser = userService.addUser(userDTO, Role.USER);
-
-        Assertions.assertEquals(expectedUser, actualUser);*/
-
-        // TODO: 2020-02-17 java.lang.NullPointerException
-        //	at com.app.service.UserService.addUser(UserService.java:51)
-        //	at com.app.service.UserServiceTests.test20(UserServiceTests.java:93)
     }
 
     @Test

@@ -98,8 +98,6 @@ public class CompanyService {
             throw new AppException(InfoCodes.SERVICE_COMPANY, "edit - company ID less than zero");
         }
 
-        // TODO: 2020-01-25 edit company method body
-
         return CompanyDTO.builder().id(1L).build();
     }
 }

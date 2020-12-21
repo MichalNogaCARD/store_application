@@ -111,17 +111,4 @@ public class ProductControllerTests {
                         .param("quantity", "111"))
                 .andExpect(MockMvcResultMatchers.status().is3xxRedirection());
     }
-
-    @Test
-    @DisplayName("remove/{id}")
-    void test4() throws Exception {
-
-        /*mockMvc
-                .perform(MockMvcRequestBuilders.post("/products/remove/{id}", 1L)
-                        .contentType(MediaType.TEXT_HTML))
-                .andExpect(MockMvcResultMatchers.status().is3xxRedirection());
-
-        // org.thymeleaf.exceptions.TemplateProcessingException:
-        //  Exception evaluating SpringEL expression: "cart.cartClosed" (template: "carts/one" - line 14, col 10)*/
-    }
 }

@@ -22,8 +22,4 @@ public class ProductCodeController {
     public ResponseEntity<List<ProductCodeDTO>> all() {
         return new ResponseEntity<>(productCodeService.findAll(), HttpStatus.OK);
     }
-
-    // add
-
-    // remove
 }

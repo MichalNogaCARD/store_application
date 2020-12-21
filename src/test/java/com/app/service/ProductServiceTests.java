@@ -216,15 +216,6 @@ public class ProductServiceTests {
                 .map(ProductMapper::toDto)
                 .sorted(Comparator.comparing(ProductDTO::getName))
                 .collect(Collectors.toList());
-
-//        List<ProductDTO> actualProducts = productService.getProductsOfCart(6L)
-//                .stream()
-//                .sorted(Comparator.comparing(ProductDTO::getName))
-//                .collect(Collectors.toList());
-//
-//        Assertions.assertEquals(expectedProducts, actualProducts);
-
-        // TODO: 31.08.2020 do poprawy
     }
 
     @Test

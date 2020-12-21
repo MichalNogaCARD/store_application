@@ -431,20 +431,12 @@ public class CartServiceTests {
                 .when(productsInCartRepository.findAll())
                 .thenReturn(List.of(productsInCart1, productsInCart2, productsInCart3));
 
-//        Mockito
-//                .when(cartRepository.findByUserId(user.getId()))
-//                .thenReturn(cart.getId());
-
         Mockito
                 .when(userRepository.findById(user.getId()))
                 .thenReturn(Optional.of(user));
 
         List<ProductsInCartDTO> productsBeforeRemove = cartService.getAllProductsFromCart(cart.getId());
-//        CartDTO cartAfterRemove = cartService.removeProductFromCart(productsInCart1.getProductId(), user.getId());
-        //  List<ProductsInCartDTO> productsAfterRemove = cartService.removeProductFromCart(productsInCart1.getId(), user.getId());
-        //List<ProductsInCartDTO> productsAfterRemove = cartService.getAllProductsFromCart(cart.getId());
 
         Assertions.assertEquals(3, productsBeforeRemove.size());
-//        Assertions.assertEquals(2, productsAfterRemove.size()); // TODO: 26.08.2020
     }
 }
