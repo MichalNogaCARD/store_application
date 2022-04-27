@@ -7,11 +7,4 @@ Backend is written in Java, using Spring framework with Spring security and MYSQ
 How to run project:
 
 1. RUN ONLY WITH STORE APPLICATION FRONTEND. Make sure you have MySQL installed on computer. The sample data will be loaded automatically.
-2. Run backend part first
-3. Run frontend:
->> npm start
-4. Your browser will start automatically and open application (on localhost:3000)
-5. To login use credentials:
-login: user@gmail.com
-password: useruser
-6. Now You can use all the avaliable functions of application. 
+2. Run backend part first usung main function in PrimaPlatformaApplication class
